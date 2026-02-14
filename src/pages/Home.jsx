@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const res = await axios.get(`https://real-estate-website-backend-one.vercel.app/api/content?t=${Date.now()}`);
+        const res = await axios.get(`https://real-estate-website-backend-clem.onrender.com/api/content?t=${Date.now()}`);
         setPageData(res.data);
       } catch (err) {
         console.error("Failed to fetch fresh content", err);

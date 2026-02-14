@@ -38,14 +38,14 @@ export default function Admin() {
   const nav = useNavigate();
 
   useEffect(() => {
-    axios.get("https://real-estate-website-backend-one.vercel.app/api/content")
+    axios.get("https://real-estate-website-backend-clem.onrender.com/api/content")
       .then(res => setData({ ...initialDataStructure, ...res.data }))
       .catch(() => setData(initialDataStructure));
   }, []);
 
   const save = async () => {
     try {
-      const res = await axios.post("https://real-estate-website-backend-one.vercel.app/api/content", data);
+      const res = await axios.post("https://real-estate-website-backend-clem.onrender.com/api/content", data);
       if (res.status === 200) {
         alert("Changes Published Successfully!");
         window.location.href = "/";

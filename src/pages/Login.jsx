@@ -11,7 +11,7 @@ export default function Login() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://real-estate-website-backend-one.vercel.app/api/auth/login", {
+      const res = await axios.post("https://real-estate-website-backend-clem.onrender.com/api/auth/login", {
         email,
         password
       });
